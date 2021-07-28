@@ -100,11 +100,7 @@ export default class App extends Component {
         )}
         {isLoading && <LoaderSpiner />}
         {showButton && !isLoading && <Button onClick={this.getImages} />}
-        {showModal && (
-          <Modal onClose={this.toggleModal}>
-            <img src={largeImageURL} alt="" />
-          </Modal>
-        )}
+        {showModal && <Modal onClose={this.toggleModal} img={largeImageURL} />}
       </div>
     );
   }
